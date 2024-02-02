@@ -15,3 +15,7 @@ async def upload_mp4(video_url: str):
 @app.post("/mp4-upload")
 async def upload_mp4(file: UploadFile):
     return make_file_name(file, ".mp4")
+
+@app.post("/wav-upload")
+async def upload_wav(file: UploadFile):
+    return make_file_name(file, ".wav")
